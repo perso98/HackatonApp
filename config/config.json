@@ -1,0 +1,15 @@
+{
+  "development": {
+    "username": "server408829_hackaton",
+    "password": "SDLaf45d3$%hdz2!666",
+    "database": "server408829_hackaton",
+    "host": "mariadb106.server408829.nazwa.pl",
+    "dialect": "mysql"
+    
+  }
+  
+    
+  
+ 
+
+}

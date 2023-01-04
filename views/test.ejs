@@ -1,0 +1,52 @@
+<%- include('master.ejs') %>
+
+<div class="formsToDo">
+  <form action="toDo" method="post">
+    <div class="">
+      <label style="text-align: left">To Do :</label>
+      <input type="text" name="nazwa" style="text-align: left" />
+    </div>
+    <div class="">
+      <label style="text-align: left">Info :</label>
+      <textarea type="text" name="zawartosc"></textarea>
+    </div>
+    <button class="btn btn-success" style="font-size: 30px" type="submit">
+      Add
+    </button>
+  </form>
+</div>
+
+<div class="containerToDo">
+  <div class="containterDo"></div>
+  <% Lista.forEach(function(toDoList) { %>
+
+  <div class="containterTo">
+    <div class="row m-3">
+      <div class="col col-md-4 rows">
+        Nazwa:
+        <p><%= toDoList.nazwa %></p>
+      </div>
+      <div class="col col-md-4 rows">
+        Info:
+        <p><%= toDoList.zawartosc %></p>
+      </div>
+      <div class="col col-md-2 rows del">
+        <form
+          id="add-row-form"
+          action="/deleteToDo-<%= toDoList.id %>"
+          method="post"
+        >
+          <button type="submit" class="btn btn-danger">Usuń</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <% }); %> <% if (Lista == 0) { %>
+  <div class="brak">Nic tu nie ma :(</div>
+  <div class="containterDo"></div>
+  <% } %>
+</div>
+
+<div style="margin: auto"></div>
+<%- include('footer.ejs') %>

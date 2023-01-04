@@ -1,0 +1,324 @@
+<%- include('master.ejs') %>
+<div class="podst">
+  <form class="formContent" action="postteam" method="POST" onsubmit="disableButton()">
+    <div class="">
+      <% if(locals.message){ %>
+      <div class="alert alert-success"><%= message %></div>
+  
+      <%}%> <% if(locals.message2){ %>
+      <div class="alert alert-danger"><%= message2 %></div>
+  
+      <%}%>
+      <div class="formNazwaSzkola row" >
+        <div class="" style="text-align: center;">
+          <h1>Formularz dla studentów</h1>
+        </div>
+        <div class="col ">
+          <label>Nazwa zespołu:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              name="teamname"
+              placeholder="nazwa zespołu"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label>Nazwa szkoły:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              name="schoolname"
+              placeholder="nazwa szkoły"
+              required
+            />
+          </div>
+        </div>
+      </div>
+  
+      <input type="hidden" name="schoollevel" value="student" />
+      
+      <div class="formContent-osoby row">
+        <div class="col osoba">
+          <label>Osoba nr 1:</label>
+        </div>
+        <div class="col">
+          <label>Imie:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="imie"
+              name="imie1"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label>Nazwisko:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="nazwisko"
+              name="nazwisko1"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label>e-mail:</label>
+          <div class="">
+            <input
+              type="email"
+              class=""
+              placeholder="e-mail"
+              name="email1"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label>Indeks:</label>
+          <div class="">
+            <input
+              type="number"
+              class=""
+              placeholder="indeks"
+              name="index1"
+              
+            />
+          </div>
+        </div>
+        
+      </div>
+  
+  
+      <div class="formContent-osoby row" >
+        <div class="col osoba">
+          <label>Osoba nr 2:</label>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Imie:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="imie"
+              name="imie2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Nazwisko:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="nazwisko"
+              name="nazwisko2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">e-mail:</label>
+          <div class="">
+            <input
+              type="email"
+              class=""
+              placeholder="e-mail"
+              name="email2"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Indeks:</label>
+          <div class="">
+            <input
+              type="number"
+              class=""
+              placeholder="indeks"
+              name="index2"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="formContent-osoby row" >
+        <div class="col osoba">
+          <label>Osoba nr 3:</label>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Imie:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="imie"
+              name="imie3"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Nazwisko:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="nazwisko"
+              name="nazwisko3"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">e-mail:</label>
+          <div class="">
+            <input
+              type="email"
+              class=""
+              placeholder="e-mail"
+              name="email3"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Indeks:</label>
+          <div class="">
+            <input
+              type="number"
+              class=""
+              placeholder="indeks"
+              name="index3"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="formContent-osoby row" >
+        <div class="col osoba">
+          <label>Osoba nr 4:</label>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Imie:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="imie"
+              name="imie4"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Nazwisko:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="nazwisko"
+              name="nazwisko4"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">e-mail:</label>
+          <div class="">
+            <input
+              type="email"
+              class=""
+              placeholder="e-mail"
+              name="email4"
+              required
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Indeks:</label>
+          <div class="">
+            <input
+              type="number"
+              class=""
+              placeholder="indeks"
+              name="index4"
+            />
+          </div>
+        </div>
+      </div>
+  
+      <div class="formContent-osoby row" >
+        <div class="col osoba">        
+          <label>Osoba nr 5:</label>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Imie:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="imie"
+              name="imie5"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Nazwisko:</label>
+          <div class="">
+            <input
+              type="text"
+              class=""
+              placeholder="nazwisko"
+              name="nazwisko5"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">e-mail:</label>
+          <div class="">
+            <input
+              type="email"
+              class=""
+              placeholder="e-mail"
+              name="email5"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <label class="label-hidden">Indeks:</label>
+          <div class="">
+            <input
+              type="number"
+              class=""
+              placeholder="indeks"
+              name="index5"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formContent-btn">
+      <button type="submit" id="btn2" class="mcbutton">Wyślij</button>
+    </div>
+  </form>
+  </div>
+
+  <script>
+    function disableButton() {
+      var btn = document.getElementById("btn2");
+      btn.disabled = true;
+      btn.innerText = "Wysyłanie...";
+    }
+  </script>
+  
+  <%- include('footer.ejs') %>
+  
